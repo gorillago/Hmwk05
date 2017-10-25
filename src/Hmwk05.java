@@ -31,7 +31,7 @@ public class Hmwk05 {
             boolean isCommon = commonPassword(commonPasswords, n, password);
             String strength = passwordStrength(entropy, isCommon);
 
-            System.out.printf("%4d %-11s %-19s %-9s %-9d %-8d %-7f\n", i+1, strength, displayPassword(password, 19), isCommon, length, range, entropy);
+            System.out.printf("%4d %-11s %-19s %-9s %-9d %-8d %-7.1f\n", i+1, strength, displayPassword(password, 19), isCommon, length, range, entropy);
 
             switch (strength) {
                 case "Fail":
@@ -100,7 +100,6 @@ public class Hmwk05 {
             System.out.printf("File \"%s\" not found.\n", inputFile);
             System.exit(1);
         }
-
 
         return count;
     }
